@@ -43,7 +43,7 @@ steps:
     arguments: '--configuration $(buildConfiguration) --no-restore'
     modifyOutputPath: false
   displayName: 'Publish CustomerApi'
-#  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/head/master'))
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
 
 - task: PublishBuildArtifacts@1
   inputs:
